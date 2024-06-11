@@ -12,9 +12,6 @@ def binary_to_decimal(binary_str):
 def hexadecimal_to_decimal(hex_str):
     return int(hex_str, 16)
 
-def get_random_unicode_character():
-    return chr(random.randint(0x2600, 0x26FF))  # Range of Miscellaneous Symbols
-
 def escape_room():
     print("Welcome to the Binary, Decimal, and Hexadecimal Escape Room!")
     print("Solve the puzzles to escape. Good luck!")
@@ -61,20 +58,6 @@ def escape_room():
         print("✅ Correct! You solved the fourth puzzle. 🎉")
     else:
         print(f"❌ Wrong! The correct answer was {correct_answer}. Try again.")
-        return
-
-    # Bonus Puzzle: Unicode Character
-    unicode_char = get_random_unicode_character()
-    unicode_decimal = ord(unicode_char)
-    correct_answer_binary = decimal_to_binary(unicode_decimal)
-    correct_answer_hex = decimal_to_hexadecimal(unicode_decimal)
-    print(f"🧩 Bonus Puzzle: The Unicode character is {unicode_char}. Convert its decimal value to binary and hexadecimal.")
-    answer_binary = input("Binary: ")
-    answer_hex = input("Hexadecimal: ")
-    if answer_binary == correct_answer_binary and answer_hex == correct_answer_hex:
-        print("✅ Correct! You solved the bonus puzzle. 🎉")
-    else:
-        print(f"❌ Wrong! The correct answers were Binary: {correct_answer_binary}, Hexadecimal: {correct_answer_hex}.")
         return
 
     print("🎉 Congratulations! You have successfully escaped the room! 🎉")
